@@ -1,0 +1,27 @@
+{
+  "name": "Vextup",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "15",
+      "initDb": true,
+      "database": "vextup",
+      "user": "postgres",
+      "password": "postgres"
+    }
+  },
+  "forwardPorts": [3000, 5432],
+  "postCreateCommand": "pnpm install && npx prisma generate",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "prisma.prisma",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
