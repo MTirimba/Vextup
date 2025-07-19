@@ -2,7 +2,7 @@
   "name": "Vextup",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  "service": "db",
   "workspaceFolder": "/workspaces/Vextup",
   "forwardPorts": [3000, 5432],
   "postCreateCommand": "pnpm install && npx prisma generate",

@@ -13,14 +13,5 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
-  app:
-    build:
-      context: .
-    volumes:
-      - .:/workspaces/Vextup
-    command: sleep infinity
-    depends_on:
-      - db
-
 volumes:
   postgres-data:
